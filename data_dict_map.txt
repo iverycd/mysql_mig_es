@@ -1,0 +1,1 @@
+{"index": "yst_demand", "table_name": "yst_demand"}
