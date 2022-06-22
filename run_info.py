@@ -11,9 +11,9 @@ def print_database_info():
     k.align[titile] = "l"  # 以name字段左对齐
     k.padding_width = 1  # 填充宽度
     k.add_row(["Support Database: MySQL 8,Elastic 8"])
-    k.add_row(["Tool Version: 1.3.5"])
+    k.add_row(["Tool Version: 1.3.7"])
     k.add_row(["Descriptor: A tool easy migrate Mysql to ElasticSearch"])
-    k.add_row(["Release Date: 2022-04-28"])
+    k.add_row(["Release Date: 2022-06-07"])
     k.add_row(["Powered By: Infrastructure Research Center of Epoint"])
     print(k.get_string(sortby=titile, reversesort=False))
     time.sleep(5)

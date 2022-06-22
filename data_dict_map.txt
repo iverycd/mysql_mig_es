@@ -1,1 +1,1 @@
-{"index": "yst_demand", "table_name": "yst_demand"}
+{"index": "case_info", "table_name": "case_info"}

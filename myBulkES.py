@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-modify:"2022-04-29"
-version:1.3.6
-desc:优化代码，增加会话的参数
+modify:"2022-06-07"
+version:1.3.7
+desc:解决了之前在调用parallel_read_write方法的时候，入参的时候写了多余的参数es_host导致只能写第一页数据（在294行）
 """
 import ast
 import concurrent
@@ -291,7 +291,7 @@ class TongBu(object):
                                 task = {
                                     executor.submit(parallel_read_write, split_page_index, page_size, pk_key,
                                                     mysql_table_name, sqldatas, dict_set, es_index,
-                                                    bulk_batch_size, es_bulk_chunk_size, es_thread_count, v_index, es_write_thread, es_host): v_index
+                                                    bulk_batch_size, es_bulk_chunk_size, es_thread_count, v_index, es_write_thread): v_index
                                     for v_index in range(mysql_read_thread)}
                                 for future in concurrent.futures.as_completed(task):
                                     task_name = task[future]
